@@ -10,28 +10,54 @@ import UIKit
 import SnapKit
 
 class MainViewController: UIViewController {
-
-  var button = UIButton()
+  let plustBarButton = UIBarButtonItem()
   
-    override func viewDidLoad() {
-      super.viewDidLoad()
-      self.view.backgroundColor = .white
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    setupUI()
+    setupConstraint()
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    print("viewDidAppear")
+//
+//    navigationController?.navigationBar.topItem?.title = "FLYBOOK"
+//    navigationController?.navigationBar.barTintColor = UIColor(red: 0.133, green: 0.227, blue: 0.3686, alpha: 1)
+//    navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    print("viewWillAppear")
+    
+  }
+  
+  func setupUI() {
+    view.backgroundColor = .white
+    
+    let icon = UIImage(named: "icon-plus")
+    let iconSize = CGRect(origin: CGPoint.zero, size: CGSize(width: 50, height: 50))
+    let iconButton = UIButton(frame: iconSize)
+    iconButton.setBackgroundImage(icon, for: .normal)
+    iconButton.addTarget(self, action: #selector(plusButtonDidTap), for: .touchUpInside)
+    plustBarButton.customView = iconButton
+    let currWidth = plustBarButton.customView?.widthAnchor.constraint(equalToConstant: 50)
+    currWidth?.isActive = true
+    let currHeight = plustBarButton.customView?.heightAnchor.constraint(equalToConstant: 40)
+    currHeight?.isActive = true
+    navigationItem.leftBarButtonItem = plustBarButton
+  }
+  
+  func setupConstraint() {
+    
+  }
+  
+  // MARK: Action
+  
+  @objc func plusButtonDidTap() {
+    let plusVC = PlusViewController()
+    self.navigationController?.pushViewController(plusVC, animated: true)
+  }
 }

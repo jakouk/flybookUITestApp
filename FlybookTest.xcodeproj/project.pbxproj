@@ -19,6 +19,7 @@
 		73EAF5A720E5255E00669787 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EAF5A620E5255E00669787 /* WriteViewController.swift */; };
 		73EAF5A920E5256700669787 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EAF5A820E5256700669787 /* FeedViewController.swift */; };
 		73EAF5AB20E5257100669787 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EAF5AA20E5257100669787 /* UserViewController.swift */; };
+		BDB1380520F32D3000669E38 /* PlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB1380420F32D3000669E38 /* PlusViewController.swift */; };
 		C6842ED1590306970AD8381A /* Pods_FlybookTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 426E49074EAB1255EAB40EB7 /* Pods_FlybookTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		73EAF5AA20E5257100669787 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		A193D6AAECB019810580230A /* Pods-FlybookTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlybookTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlybookTestTests/Pods-FlybookTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A5224ABE46CE2BE5C32CDF11 /* Pods-FlybookTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlybookTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlybookTest/Pods-FlybookTest.debug.xcconfig"; sourceTree = "<group>"; };
+		BDB1380420F32D3000669E38 /* PlusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			children = (
 				73EAF58220E3C01C00669787 /* AppDelegate.swift */,
 				73EAF5A220E3C0FC00669787 /* MainViewController.swift */,
+				BDB1380420F32D3000669E38 /* PlusViewController.swift */,
 				73EAF5A420E5255300669787 /* SearchViewController.swift */,
 				73EAF58420E3C01C00669787 /* ViewController.swift */,
 				73EAF58620E3C01C00669787 /* Main.storyboard */,
@@ -155,6 +158,7 @@
 				73EAF57C20E3C01C00669787 /* Frameworks */,
 				73EAF57D20E3C01C00669787 /* Resources */,
 				29C8495A80FD99F2DCF6260B /* [CP] Embed Pods Frameworks */,
+				A161F1C235EE9B7D94078599 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,6 +177,8 @@
 				73EAF58F20E3C01D00669787 /* Sources */,
 				73EAF59020E3C01D00669787 /* Frameworks */,
 				73EAF59120E3C01D00669787 /* Resources */,
+				8E34535BDE3C74344D09856C /* [CP] Embed Pods Frameworks */,
+				6B7524CC53F63198D5248547 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -279,6 +285,51 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6B7524CC53F63198D5248547 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlybookTestTests/Pods-FlybookTestTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E34535BDE3C74344D09856C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlybookTestTests/Pods-FlybookTestTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A161F1C235EE9B7D94078599 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlybookTest/Pods-FlybookTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B573443322F6DDD72849B3CD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -310,6 +361,7 @@
 				73EAF5A520E5255300669787 /* SearchViewController.swift in Sources */,
 				73EAF5A720E5255E00669787 /* WriteViewController.swift in Sources */,
 				73EAF5A920E5256700669787 /* FeedViewController.swift in Sources */,
+				BDB1380520F32D3000669E38 /* PlusViewController.swift in Sources */,
 				73EAF58320E3C01C00669787 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

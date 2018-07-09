@@ -23,17 +23,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window = UIWindow(frame: UIScreen.main.bounds)
     
     let tabbarVC = UITabBarController()
-    
+//
     let navigationBarAppearace = UINavigationBar.appearance()
-    navigationBarAppearace.tintColor = .white
-    navigationBarAppearace.barTintColor = .blue
+//    navigationBarAppearace.tintColor = .white
     navigationBarAppearace.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
   
     let homeVC = MainViewController()
     
     let homeNaviVC = UINavigationController(rootViewController: homeVC)
-    homeNaviVC.navigationBar.topItem?.title = "FLYBOOK"
-    homeNaviVC.navigationBar.barTintColor = UIColor(red: 0.133, green: 0.227, blue: 0.3686, alpha: 1)
+//    homeNaviVC.navigationBar.topItem?.title = "FLYBOOK"
+//    homeNaviVC.navigationBar.barTintColor = UIColor(red: 0.133, green: 0.227, blue: 0.3686, alpha: 1)
     homeNaviVC.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
     homeNaviVC.tabBarItem.title = "설정"
     homeNaviVC.tabBarItem.image = UIImage(named: "tab-home")

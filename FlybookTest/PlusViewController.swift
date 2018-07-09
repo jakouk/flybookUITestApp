@@ -17,6 +17,12 @@ class PlusViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupUI()
+    setTabBarHidden(true)
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    setTabBarHidden(false)
   }
   
   func setupUI() {
@@ -26,8 +32,6 @@ class PlusViewController: UIViewController {
     self.navigationController?.navigationBar.shadowImage = UIImage()
     self.navigationController?.navigationBar.isTranslucent = true
     self.navigationController?.view.backgroundColor = UIColor.clear
-    
-//    self.navigationItem.barTintColor = UIColor(red: 0.133, green: 0.227, blue: 0.3686, alpha: 1)
     
     imageView.image = UIImage(named: "backImage")
     view.addSubview(imageView)
@@ -39,6 +43,7 @@ class PlusViewController: UIViewController {
       make.bottom.bottom.equalToSuperview().offset(self.view.frame.height / 2)
     }
   }
+  
   
   
   override func didReceiveMemoryWarning() {

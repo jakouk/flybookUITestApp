@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		42D09ADB0F6C2189AE6CFE39 /* Pods_FlybookTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42EF95B366E6F1A7671D0714 /* Pods_FlybookTestTests.framework */; };
+		736FAB5B20F383D000F8B6DF /* UIViewController + Visible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736FAB5A20F383D000F8B6DF /* UIViewController + Visible.swift */; };
 		73EAF58320E3C01C00669787 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EAF58220E3C01C00669787 /* AppDelegate.swift */; };
 		73EAF58520E3C01C00669787 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EAF58420E3C01C00669787 /* ViewController.swift */; };
 		73EAF58820E3C01C00669787 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73EAF58620E3C01C00669787 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 		426E49074EAB1255EAB40EB7 /* Pods_FlybookTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlybookTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42EF95B366E6F1A7671D0714 /* Pods_FlybookTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlybookTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66E86E10FC6FF9980EC0441C /* Pods-FlybookTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlybookTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlybookTest/Pods-FlybookTest.release.xcconfig"; sourceTree = "<group>"; };
+		736FAB5A20F383D000F8B6DF /* UIViewController + Visible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Visible.swift"; sourceTree = "<group>"; };
 		73EAF57F20E3C01C00669787 /* FlybookTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlybookTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73EAF58220E3C01C00669787 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73EAF58420E3C01C00669787 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				73EAF5A620E5255E00669787 /* WriteViewController.swift */,
 				73EAF5A820E5256700669787 /* FeedViewController.swift */,
 				73EAF5AA20E5257100669787 /* UserViewController.swift */,
+				736FAB5A20F383D000F8B6DF /* UIViewController + Visible.swift */,
 			);
 			path = FlybookTest;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				73EAF5A320E3C0FC00669787 /* MainViewController.swift in Sources */,
 				73EAF58520E3C01C00669787 /* ViewController.swift in Sources */,
 				73EAF5A520E5255300669787 /* SearchViewController.swift in Sources */,
+				736FAB5B20F383D000F8B6DF /* UIViewController + Visible.swift in Sources */,
 				73EAF5A720E5255E00669787 /* WriteViewController.swift in Sources */,
 				73EAF5A920E5256700669787 /* FeedViewController.swift in Sources */,
 				BDB1380520F32D3000669E38 /* PlusViewController.swift in Sources */,

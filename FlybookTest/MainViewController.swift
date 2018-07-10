@@ -25,13 +25,19 @@ class MainViewController: UIViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    navigationController?.navigationBar.tintColor = UIColor(red: 0.133, green: 0.227, blue: 0.3686, alpha: 1)
+    print("viewWillAppear")
+    
+//    self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+    self.navigationController?.navigationBar.isTranslucent = true
+    self.navigationController?.navigationBar.backgroundColor = UIColor(red: 0.133, green: 0.227, blue: 0.3686, alpha: 1)
+    
     navigationController?.navigationBar.topItem?.title = "FLYBOOK"
   }
   
   func setupUI() {
     view.backgroundColor = .white
     
+    // backBarButton Blank
      navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     
     let icon = UIImage(named: "icon-plus")

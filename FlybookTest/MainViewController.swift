@@ -27,9 +27,9 @@ class MainViewController: UIViewController {
     super.viewWillAppear(animated)
     print("viewWillAppear")
     
-//    self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+    // iOS 11에서 translucent를 true롤 설정하면 기본적으로 반투명이다.
     self.navigationController?.navigationBar.isTranslucent = true
-    self.navigationController?.navigationBar.backgroundColor = UIColor(red: 0.133, green: 0.227, blue: 0.3686, alpha: 1)
+    self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.133, green: 0.227, blue: 0.3686, alpha: 1)
     
     navigationController?.navigationBar.topItem?.title = "FLYBOOK"
   }

@@ -46,10 +46,6 @@ class PlusViewController: UIViewController {
     self.navigationController?.navigationBar.shadowImage = UIImage()
     self.navigationController?.navigationBar.isTranslucent = true
     
-//    navigationController?.navigationBar.isTranslucent = true
-//    navigationController?.navigationBar.barTintColor = .clear
-//    navigationController?.view.backgroundColor = .clear
-//
     imageView.image = UIImage(named: "backImage")
     view.addSubview(imageView)
   }

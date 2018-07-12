@@ -30,8 +30,6 @@ class MainViewController: UIViewController {
     // iOS 11에서 translucent를 true롤 설정하면 기본적으로 반투명이다.
     self.navigationController?.navigationBar.isTranslucent = true
     self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.133, green: 0.227, blue: 0.3686, alpha: 1)
-    
-    navigationController?.navigationBar.topItem?.title = "FLYBOOK"
   }
   
   func setupUI() {
@@ -39,6 +37,7 @@ class MainViewController: UIViewController {
     
     // backBarButton Blank
      navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+     navigationItem.backBarButtonItem?.tintColor = .white
     
     let icon = UIImage(named: "icon-plus")
     let iconSize = CGRect(origin: CGPoint.zero, size: CGSize(width: 50, height: 50))
@@ -51,6 +50,8 @@ class MainViewController: UIViewController {
     let currHeight = plustBarButton.customView?.heightAnchor.constraint(equalToConstant: 40)
     currHeight?.isActive = true
     navigationItem.leftBarButtonItem = plustBarButton
+    
+    navigationController?.navigationBar.topItem?.title = "FLYBOOK"
   }
   
   func setupConstraint() {

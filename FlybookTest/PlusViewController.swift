@@ -15,6 +15,7 @@ class PlusViewController: UIViewController {
   let scrollView = UIScrollView()
   let image = UIImage()
   var defaultImage: UIImage?
+  var contentView = UIView()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -50,13 +51,27 @@ class PlusViewController: UIViewController {
     self.navigationController?.navigationBar.isTranslucent = true
     
     imageView.image = UIImage(named: "backImage")
+    
     view.addSubview(imageView)
+    view.addSubview(scrollView)
+    scrollView.addSubview(contentView)
   }
   
   func setupConstraint() {
+    // View
     imageView.snp.makeConstraints { make in
       make.top.leading.trailing.equalToSuperview()
       make.bottom.equalToSuperview().offset(-self.view.frame.height / 3 * 2)
+    }
+    
+    scrollView.snp.makeConstraints { make in
+      make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+      make.bottom.left.right.equalTo(view)
+    }
+    
+    contentView.snp.makeConstraints { make in
+      make.top.bottom.equalTo(scrollView)
+      make.left.right.equalTo(view)
     }
   }
   

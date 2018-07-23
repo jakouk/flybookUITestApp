@@ -66,12 +66,16 @@ class PlusViewController: UIViewController {
     
     scrollView.snp.makeConstraints { make in
       make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-      make.bottom.left.right.equalTo(view)
+      make.bottom.leading.trailing.equalTo(view)
     }
     
+    // scrollView에 ContentView를 올리고서 layout 오류를 보지않으려면
+    // top, bottom, leading trailing 을 equalToSuperView()로 하고서
+    // width, height를 view와 equalTo하면 된다. 
     contentView.snp.makeConstraints { make in
-      make.top.bottom.equalTo(scrollView)
-      make.left.right.equalTo(view)
+      make.top.bottom.leading.trailing.equalToSuperview()
+      make.width.equalTo(view)
+      make.height.equalTo(view)
     }
   }
   

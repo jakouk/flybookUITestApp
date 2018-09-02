@@ -11,6 +11,7 @@ import SnapKit
 
 class MainViewController: UIViewController {
   let plustBarButton = UIBarButtonItem()
+  var firstHeight: CGFloat = 0
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -20,7 +21,13 @@ class MainViewController: UIViewController {
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    print("viewDidAppear")
+    
+    if firstHeight == 0 {
+      firstHeight = (self.tabBarController?.tabBar.frame.height)!
+    } else {
+      setTabBarHidden(false)
+    }
+    print("main viewDidAppear")
   }
   
   override func viewWillAppear(_ animated: Bool) {

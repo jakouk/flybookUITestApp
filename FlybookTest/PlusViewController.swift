@@ -30,9 +30,7 @@ class PlusViewController: UIViewController {
   
   override func viewDidDisappear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    print("viewDidDisappear")
-    
-    setTabBarHidden(false)
+    print("plus viewDidDisappear")
     
     self.navigationController?.navigationBar.setBackgroundImage(defaultImage, for: .default)
     self.navigationController?.navigationBar.shadowImage = defaultImage
